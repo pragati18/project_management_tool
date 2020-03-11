@@ -2,14 +2,14 @@ import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import  dashboard  from "../components/content/Dashboard";
 import project_add from "../components/content/Add/Projects/Projects";
-import project_list from "../components/content/Details/Projects";
+import project_list from "../components/content/Details/Projects/Projects";
 import add_employee_logs from "../components/content/Add/Logs/Logs";
 import employee_list from "../components/content/Details/Employees/Employees";
-import official from "../components/content/Leaves/Official";
-import leaves_employee from "../components/content/Leaves/Empleaves";
+import official from "../components/content/Leaves/Official/Oleaves";
+import leaves_employee from "../components/content/Leaves/Empleaves/Eleaves";
 import user_add from "../components/content/Add/User/User";
 import admin_list from "../components/content/Details/Admin/Admin";
-import logout from "../components/content/Pages/Login";
+import logout from "../components/content/Pages/Login/Login";
 
 export default function Routes() {
     return (
