@@ -3,6 +3,8 @@ import { Button } from 'reactstrap';
 import { MDBDataTable } from 'mdbreact';
 import Pdates from '../Employees/pdates';
 import { Link} from 'react-router-dom';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {faTrash, faPencilAlt} from "@fortawesome/free-solid-svg-icons";
 
 class EEmployees extends Component {
 
@@ -68,8 +70,8 @@ class EEmployees extends Component {
         pname: 'Project Management',
         logs: '25',
         skills: 'HTML, CSS, ReactJS',
-        edit: <Link to="/edit/employee" className="nav-link"><Button className="edit_button"><i className="nav-icon icon-pencil"></i>  Edit</Button></Link>,
-        delete: <Button className= "deactive_button" onClick={this.clickHandler}><i className="nav-icon icon-trash"></i>  Delete</Button>
+        edit: <Link to="/edit/employee" className="nav-link"><Button className="edit_button"><FontAwesomeIcon icon={faPencilAlt} className="mr-2" />  Edit</Button></Link>,
+        delete: <Button className= "deactive_button" onClick={this.clickHandler}><FontAwesomeIcon icon={faTrash} className="mr-2" />  Delete</Button>
       },
        {
         srno:'2',
@@ -77,8 +79,8 @@ class EEmployees extends Component {
         pname: 'Project Management',
         logs: '35',
         skills: 'Ajax, CSS, HTML',
-        edit: <Link to="/edit/employee" className="nav-link"><Button className="edit_button"><i className="nav-icon icon-pencil"></i>  Edit</Button></Link>,
-        delete: <Button className= "deactive_button" onClick={this.clickHandler}><i className="nav-icon icon-trash"></i>  Delete</Button>
+        edit: <Link to="/edit/employee" className="nav-link"><Button className="edit_button"><FontAwesomeIcon icon={faPencilAlt} className="mr-2" />  Edit</Button></Link>,
+        delete: <Button className= "deactive_button" onClick={this.clickHandler}><FontAwesomeIcon icon={faTrash} className="mr-2" />  Delete</Button>
       },
       {
         srno:'3',
@@ -86,46 +88,13 @@ class EEmployees extends Component {
         pname: 'Project Management',
         logs: '25',
         skills: 'HTML, CSS, ReactJS',
-        edit: <Link to="/edit/employee" className="nav-link"><Button className="edit_button"><i className="nav-icon icon-pencil"></i>  Edit</Button></Link>,
-        delete: <Button className= "deactive_button" onClick={this.clickHandler}><i className="nav-icon icon-trash"></i>  Delete</Button>
-      },
-       {
-        srno:'4',
-        name: 'Rajesh Darak',
-        pname: 'Project Management',
-        logs: '35',
-        skills: 'Ajax, CSS, HTML',
-        edit: <Link to="/edit/employee" className="nav-link"><Button className="edit_button"><i className="nav-icon icon-pencil"></i>  Edit</Button></Link>,
-        delete: <Button className= "deactive_button" onClick={this.clickHandler}><i className="nav-icon icon-trash"></i>  Delete</Button>
-      },
-      {
-        srno:'5',
-        name: 'Pragati Gaikwad',
-        pname: 'Project Management',
-        logs: '25',
-        skills: 'HTML, CSS, ReactJS',
-        edit: <Link to="/edit/employee" className="nav-link"><Button className="edit_button"><i className="nav-icon icon-pencil"></i>  Edit</Button></Link>,
-        delete: <Button className= "deactive_button" onClick={this.clickHandler}><i className="nav-icon icon-trash"></i>  Delete</Button>
-      },
-       {
-        srno:'6',
-        name: 'Rajesh Darak',
-        pname: 'Project Management',
-        logs: '35',
-        skills: 'Ajax, CSS, HTML',
-        edit: <Link to="/edit/employee" className="nav-link"><Button className="edit_button"><i className="nav-icon icon-pencil"></i>  Edit</Button></Link>,
-        delete: <Button className= "deactive_button" onClick={this.clickHandler}><i className="nav-icon icon-trash"></i>  Delete</Button>
-      },
-      
-     
-      
+        edit: <Link to="/edit/employee" className="nav-link"><Button className="edit_button"><FontAwesomeIcon icon={faPencilAlt} className="mr-2" />  Edit</Button></Link>,
+        delete: <Button className= "deactive_button" onClick={this.clickHandler}><FontAwesomeIcon icon={faTrash} className="mr-2" />  Delete</Button>
+      },  
     ]
   };
 
   }
-
-  
-
   render() {
     return[ 
       <Pdates/>,

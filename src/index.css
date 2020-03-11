@@ -16,7 +16,10 @@ code {
   padding: 5%;
 }
 
-
+.css_dropdown {
+background:"#354052";
+width:"200px";
+}
 
 
 .dates {
@@ -222,7 +225,7 @@ input[type=file]::-webkit-file-upload-button {
   padding: 0;
   top:45px;
   right:0px;
-  width: 200px;
+  width: 178px;
   background-color: white;
   font-weight:bold;
   position: absolute;
@@ -233,13 +236,13 @@ input[type=file]::-webkit-file-upload-button {
 
 .nav_li {
   padding: 8px 16px;
-  border-bottom: 1px solid #e5e5e5;
+  border-bottom: 1px solid #1985ac;
 }
 .nav_li:last-child {
   border-bottom: none;
 }
 .nav_li:hover {
-  background-color: #e5e5e5;
+  background-color: #1985ac;
   color: white;
 }
 .button{
@@ -291,7 +294,7 @@ input[type=file]::-webkit-file-upload-button {
 }
 
 .nav_a:hover {
-  background-color: #e5e5e5;
+  background-color: #1985ac;
   color: white;
 }
 .table-foot{

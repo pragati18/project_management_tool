@@ -34,7 +34,7 @@ class NavDropDown extends React.Component {
     
       render() {
         return (
-            <div  className="dropdown" style = {{background:"#354052",width:"200px"}} >
+            <div  className="dropdown css_dropdown">
              <div className="nav_dropdown" onClick={this.showDropdownMenu}> My Setting </div>
     
               { this.state.displayMenu ? (

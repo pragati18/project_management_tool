@@ -3,7 +3,9 @@ import "react-datepicker/dist/react-datepicker.css";
 import { Button } from 'reactstrap';
 import { MDBDataTable } from 'mdbreact';
 import Fdates from './Fdates';
-import { Link} from 'react-router-dom';
+import { Link} from 'react-router-dom'; 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {faEye, faPencilAlt, faBan} from "@fortawesome/free-solid-svg-icons";
 
 class Projects extends Component {
 
@@ -82,9 +84,9 @@ class Projects extends Component {
         start_date: '1st Jan 2020',
         end_date: '28th Feb 2020',
         pname: 'Rajesh',
-        view: <Button className= "view_button" onClick={this.clickHandler}><i className="nav-icon icon-eye"></i>  View</Button>,
-        edit: <Link to="/edit/project" className="nav-link"><Button className="edit_button"><i className="nav-icon icon-pencil"></i>  Edit</Button></Link>,
-        deactive: <Button  className= "deactive_button" onClick={this.clickHandler}><i className="nav-icon icon-trash"></i>  Active</Button>
+        view: <Button className= "view_button" onClick={this.clickHandler}><FontAwesomeIcon icon={faEye} className="mr-2" />  View</Button>,
+        edit: <Link to="/edit/project" className="nav-link"><Button className="edit_button"><FontAwesomeIcon icon={faPencilAlt} className="mr-2" />  Edit</Button></Link>,
+        deactive: <Button  className= "deactive_button" onClick={this.clickHandler}><FontAwesomeIcon icon={faBan} className="mr-2" />   Active</Button>
       },
        {
         srno:'2',
@@ -92,9 +94,9 @@ class Projects extends Component {
         start_date: '1st Jan 2020',
         end_date: '28th Feb 2020',
         pname: 'Pragati',
-        view: <Button className= "view_button" onClick={this.clickHandler}><i className="nav-icon icon-eye"></i>  View</Button>,
-        edit: <Link to="/edit/project" className="nav-link"><Button className="edit_button"><i className="nav-icon icon-pencil"></i>  Edit</Button></Link>,
-        deactive: <Button className= "deactive_button" onClick={this.clickHandler}><i className="nav-icon icon-trash"></i>  Deactive</Button>
+        view: <Button className= "view_button" onClick={this.clickHandler}><FontAwesomeIcon icon={faEye} className="mr-2" /> View</Button>,
+        edit: <Link to="/edit/project" className="nav-link"><Button className="edit_button"><FontAwesomeIcon icon={faPencilAlt} className="mr-2" />  Edit</Button></Link>,
+        deactive: <Button className= "deactive_button" onClick={this.clickHandler}><FontAwesomeIcon icon={faBan} className="mr-2" />   Deactive</Button>
       },
        {
          srno:'3',
@@ -102,9 +104,9 @@ class Projects extends Component {
         start_date: '1st Jan 2020',
         end_date: '28th Feb 2020',
         pname: 'Pragati',
-        view: <Button className= "view_button" onClick={this.clickHandler}><i className="nav-icon icon-eye"></i>  View</Button>,
-        edit: <Link to="/edit/project" className="nav-link"><Button className="edit_button"><i className="nav-icon icon-pencil"></i>  Edit</Button></Link>,
-        deactive: <Button  className= "deactive_button" onClick={this.clickHandler}><i className="nav-icon icon-trash"></i>  Active</Button>
+        view: <Button className= "view_button" onClick={this.clickHandler}><FontAwesomeIcon icon={faEye} className="mr-2" />  View</Button>,
+        edit: <Link to="/edit/project" className="nav-link"><Button className="edit_button"><FontAwesomeIcon icon={faPencilAlt} className="mr-2" />  Edit</Button></Link>,
+        deactive: <Button  className= "deactive_button" onClick={this.clickHandler}><FontAwesomeIcon icon={faBan} className="mr-2" />  Active</Button>
       },
       
     ]
