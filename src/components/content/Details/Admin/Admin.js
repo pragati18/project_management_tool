@@ -1,107 +1,46 @@
-import React, { Component} from 'react';
-import { Button } from 'reactstrap';
-import { MDBDataTable } from 'mdbreact';
-import Pdates from '../Employees/pdates';
-import { Link} from 'react-router-dom';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {faTrash, faPencilAlt} from "@fortawesome/free-solid-svg-icons";
+import React, { Component } from "react";
+import ListComponent from "../../../ListComponent";
+import FormDialog from "../../../FormDialog";
+import EditDialog from "../../../EditDialog";
+import SimpleAppBar from "../../../SimpleAppBar";
+import { OPEN_FORM } from "../../../../constants/action-types";
+import store from "../../../../store/index";
+import Button from "@material-ui/core/Button";
+import AddIcon from "@material-ui/icons/Add";
+window.store = store;
 
 class Admin extends Component {
-
-  constructor(props) {
-  super(props)
-  this.clickHandler = () => {
-    //this.props.onClick();
-    alert("Great Shot!");
-  }
-
-  this.data = {
-    columns: [
-      {
-        label: 'Sr.No',
-        field: 'srno',
-        sort: 'asc',
-        width: 150
-      },
-      {
-        label: 'Full Name',
-        field: 'name',
-        sort: 'asc',
-        width: 150
-      },
-      {
-        label: 'Email',
-        field: 'email',
-        sort: 'asc',
-        width: 150
-      },
-      {
-        label: 'Role',
-        field: 'role',
-        sort: 'asc',
-        width: 100
-      },
-      {
-        label: 'Update',
-        field: 'edit',
-        sort: 'asc',
-        width: 150
-      },
-      {
-        label: 'Delete',
-        field: 'delete',
-        sort: 'asc',
-        width: 150
-      },
-
-     
-      
-    ],
-    rows: [
-      {
-        srno:'1',
-        name: 'Pragati Gaikwad',
-        email: 'pragati@coditation.com',
-        role: 'admin',
-        edit: <Link to="/edit/employee" className="nav-link"><Button className="edit_button"><FontAwesomeIcon icon={faPencilAlt} className="mr-2" />  Edit</Button></Link>,
-        delete: <Button className= "deactive_button" onClick={this.clickHandler}><FontAwesomeIcon icon={faTrash} className="mr-2" />  Delete</Button>
-      },
-       {
-        srno:'2',
-        name: 'Rajesh Darak',
-        email: 'rajesh@coditation.com',
-        role: 'Super Admin',
-        edit: <Link to="/edit/employee" className="nav-link"><Button className="edit_button"><FontAwesomeIcon icon={faPencilAlt} className="mr-2" />   Edit</Button></Link>,
-        delete: <Button className= "deactive_button" onClick={this.clickHandler}><FontAwesomeIcon icon={faTrash} className="mr-2" /> Delete</Button>
-      },
-      {
-        srno:'3',
-        name: 'Saurabh Mahajan',
-        email: 'admin@coditation.com',
-        role: 'Admin',
-        edit: <Link to="/edit/employee" className="nav-link"><Button className="edit_button"><FontAwesomeIcon icon={faPencilAlt} className="mr-2" />   Edit</Button></Link>,
-        delete: <Button className= "deactive_button" onClick={this.clickHandler}><FontAwesomeIcon icon={faTrash} className="mr-2" /> Delete</Button>
-      },      
-    ]
+  openDialog = () => {
+    store.dispatch({
+      type: OPEN_FORM
+    });
   };
 
-  }
-
-  
-
   render() {
-    return[ 
-      <Pdates/>,
-      <MDBDataTable
-      striped
-      hover
-      data={this.data}
-    />
-    ];
+    return (
+      <div>
+        <SimpleAppBar />
+        <ListComponent />
+
+        <FormDialog />
+        <EditDialog />
+
+        <Button
+          variant="fab"
+          style={{
+            position: "absolute",
+            bottom: 10,
+            right: 10
+          }}
+          onClick={this.openDialog}
+          color="secondary"
+        >
+          <AddIcon />
+        </Button>
+      </div>
+    );
   }
 }
-
-
 
 export default Admin;
 
