@@ -1,9 +1,9 @@
 import { ADD_LIST } from "../constants/action-types";
 import { OPEN_FORM } from "../constants/action-types";
 
-export const addArticle = article => ({
+export const addArticle = list => ({
   type: ADD_LIST,
-  payload: article
+  payload: list
 });
 
 export const openForm = showForm => ({

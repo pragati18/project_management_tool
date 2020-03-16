@@ -6,9 +6,9 @@ import DialogActions from "@material-ui/core/DialogActions";
 import DialogContent from "@material-ui/core/DialogContent";
 import DialogContentText from "@material-ui/core/DialogContentText";
 import DialogTitle from "@material-ui/core/DialogTitle";
-import store from "../store/index";
-import { CLOSE_EDIT_FORM } from "../constants/action-types";
-import { UPDATE_LIST } from "../constants/action-types";
+import store from "../../store/employee";
+import { CLOSE_EDIT_FORM } from "../../constants/action-types";
+import { UPDATE_LIST } from "../../constants/action-types";
 window.store = store;
 
 export default class FormDialog extends React.Component {
@@ -16,9 +16,10 @@ export default class FormDialog extends React.Component {
     open: false,
     list: {
       title: "",
-      id: 0,
-      role: "",
-      date: ""
+      projectName:"",
+      id: 1,
+      skills: "",
+      totalLogs: ""
     }
   };
 
@@ -33,10 +34,19 @@ export default class FormDialog extends React.Component {
       newTitle: event.target.value
     });
   };
-
-  handleChangeRole = name => event => {
+  handleChangeProjectName = name => event => {
     this.setState({
-      newRole: event.target.value    
+      newProjectName: event.target.value
+    });
+  };
+  handleChangeSkills = name => event => {
+    this.setState({
+      newSkills: event.target.value
+    });
+  };
+  handleChangeTotalLogs = name => event => {
+    this.setState({
+      newTotalLogs: event.target.value    
     });
   };
 
@@ -46,8 +56,9 @@ export default class FormDialog extends React.Component {
       payload: {
         title: this.state.newTitle ? this.state.newTitle : this.state.list.title,
         id: this.state.list.id,
-        role: this.state.newRole ? this.state.newRole : this.state.list.role,
-        date: this.state.list.date
+        projectName: this.state.newProjectName ? this.state.newProjectName : this.state.list.projectName,
+        skills: this.state.newSkills ? this.state.newSkills : this.state.list.skills,
+        totalLogs:this.state.newTotalLogs ? this.state.newTotalLogs : this.state.list.totalLogs,
       }
     });
 
@@ -89,21 +100,45 @@ export default class FormDialog extends React.Component {
               multiline
               defaultValue={this.state.list.title}
               rowsMax="4"
-              rows="4"
+              rows="1"
               fullWidth
               onChange={this.handleChangeTitle("multiline")}
             />
             <TextField
               autoFocus
               margin="dense"
-              id="role"
-              label="Role"
+              id="projectName"
+              label="Project Name"
               multiline
-              defaultValue={this.state.list.role}
+              defaultValue={this.state.list.projectName}
               rowsMax="4"
-              rows="4"
+              rows="1"
               fullWidth
-              onChange={this.handleChangeRole("multiline")}
+              onChange={this.handleChangeProjectName("multiline")}
+            />
+            <TextField
+              autoFocus
+              margin="dense"
+              id="skills"
+              label="Skills"
+              multiline
+              defaultValue={this.state.list.skills}
+              rowsMax="4"
+              rows="1"
+              fullWidth
+              onChange={this.handleChangeSkills("multiline")}
+            />
+            <TextField
+              autoFocus
+              margin="dense"
+              id="projectName"
+              label="Project Name"
+              multiline
+              defaultValue={this.state.list.totalLogs}
+              rowsMax="4"
+              rows="1"
+              fullWidth
+              onChange={this.handleChangeTotalLogs("multiline")}
             />
           </DialogContent>
           <DialogActions>

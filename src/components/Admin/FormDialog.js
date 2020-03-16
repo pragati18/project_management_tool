@@ -4,9 +4,9 @@ import Dialog from "@material-ui/core/Dialog";
 import DialogActions from "@material-ui/core/DialogActions";
 import DialogContent from "@material-ui/core/DialogContent";
 import DialogTitle from "@material-ui/core/DialogTitle";
-import store from "../store/index";
-import { CLOSE_FORM } from "../constants/action-types";
-import { ADD_LIST } from "../constants/action-types";
+import store from "../../store/admin";
+import { CLOSE_FORM } from "../../constants/action-types";
+import { ADD_LIST } from "../../constants/action-types";
 window.store = store;
 
 export default class FormDialog extends React.Component {

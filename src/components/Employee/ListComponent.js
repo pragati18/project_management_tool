@@ -7,12 +7,12 @@ import ListItemSecondaryAction from "@material-ui/core/ListItemSecondaryAction";
 import ListItemText from "@material-ui/core/ListItemText";
 import Checkbox from "@material-ui/core/Checkbox";
 import Avatar from "@material-ui/core/Avatar";
-import store from "../store/index";
+import store from "../../store/employee";
 import IconButton from "@material-ui/core/IconButton";
 import CommentIcon from "@material-ui/icons/Edit";
 import Comment from "@material-ui/icons/Error";
-import { OPEN_EDIT_FORM } from "../constants/action-types";
-import { SELECT_LIST } from "../constants/action-types";
+import { OPEN_EDIT_FORM } from "../../constants/action-types";
+import { SELECT_LIST } from "../../constants/action-types";
 import Typography from "@material-ui/core/Typography";
 import CardContent from "@material-ui/core/CardContent";
 import Card from "@material-ui/core/Card";
@@ -125,7 +125,7 @@ class ListComponent extends React.Component {
                   {value.id}
                 </Avatar>
 
-                <ListItemText primary={value.title + " - " + "(" +value.role +")"} secondary={value.email} />
+                <ListItemText primary={value.title + " - " + "(" +value.projectName +")"} secondary= {"["+value.skills+"]" + " Total Logs - "+value.totalLogs+"Hr"} />
 
                 <ListItemSecondaryAction>
                   <IconButton

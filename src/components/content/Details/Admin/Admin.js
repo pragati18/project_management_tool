@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import ListComponent from "../../../ListComponent";
-import FormDialog from "../../../FormDialog";
-import EditDialog from "../../../EditDialog";
-import SimpleAppBar from "../../../SimpleAppBar";
+import ListComponent from "../../../Admin/ListComponent";
+import FormDialog from "../../../Admin/FormDialog";
+import EditDialog from "../../../Admin/EditDialog";
+import SimpleAppBar from "../../../Admin/SimpleAppBar";
 import { OPEN_FORM } from "../../../../constants/action-types";
-import store from "../../../../store/index";
+import store from "../../../../store/admin";
 import Button from "@material-ui/core/Button";
 import AddIcon from "@material-ui/icons/Add";
 window.store = store;
