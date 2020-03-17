@@ -40,14 +40,7 @@ class NavDropDown extends React.Component {
               { this.state.displayMenu ? (
               <ul className = "nav_ul nav_backgroud">
               <Router history = {history}>
-                <li className="nav_li">
-              <NavLink to="/user_add" activeStyle={{background: "#1985ac"}}>
-                <Nav.Item className="mr-2-padding" >
-                 <FontAwesomeIcon icon={faHome} className="mr-2" />
-                 Add User
-                </Nav.Item>
-              </NavLink>
-              </li>
+
 
               <li className="nav_li">
               <NavLink to="/admin_list" activeStyle={{background: "#1985ac"}}>

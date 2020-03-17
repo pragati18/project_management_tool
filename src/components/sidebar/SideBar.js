@@ -31,13 +31,13 @@ class SideBar extends React.Component {
           <SubMenu
             title="Project"
             icon={faCopy}
-            items={["Project-List", "Add-Project"]}
+            items={["Project-List"]}
           />
 
           <SubMenu
             title="Employee"
             icon={faBriefcase}
-            items={["Employee-List", "Add-Employee-Logs"]}
+            items={["Employee-List"]}
           />
 
           <SubMenu
