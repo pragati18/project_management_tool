@@ -8,6 +8,7 @@ import store from "../../store/project";
 import { CLOSE_FORM } from "../../constants/action-types";
 import { ADD_LIST } from "../../constants/action-types";
 import {Col,Form,FormGroup,Input} from 'reactstrap';
+
 //import TagsInput from "./TagsInput";
 window.store = store;
 
@@ -93,7 +94,7 @@ export default class FormDialog extends React.Component {
           <DialogContent>
 
           <h1>Upload the File Save All The</h1>
-              <h2>Company Leaves Details</h2>
+              <h2>Project Details</h2>
                 <Form action="" method="post" encType="multipart/form-data" className="form-horizontal">
 
                   <FormGroup row className="center">

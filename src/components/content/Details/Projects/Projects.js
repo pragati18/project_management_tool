@@ -7,6 +7,7 @@ import { OPEN_FORM } from "../../../../constants/action-types";
 import store from "../../../../store/project";
 import Button from "@material-ui/core/Button";
 import AddIcon from "@material-ui/icons/Add";
+import Fdates from "./Fdates";
 window.store = store;
 
 class Projects extends Component {
@@ -19,6 +20,7 @@ class Projects extends Component {
   render() {
     return (
       <div>
+      <Fdates/>
         <SimpleAppBar />
         <ListComponent />
 

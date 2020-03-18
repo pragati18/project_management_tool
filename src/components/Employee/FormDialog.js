@@ -7,6 +7,7 @@ import DialogTitle from "@material-ui/core/DialogTitle";
 import store from "../../store/employee";
 import { CLOSE_FORM } from "../../constants/action-types";
 import { ADD_LIST } from "../../constants/action-types";
+import {Col,Form,FormGroup,Input} from 'reactstrap';
 //import TagsInput from "./TagsInput";
 window.store = store;
 
@@ -90,6 +91,17 @@ export default class FormDialog extends React.Component {
         >
           <DialogTitle id="form-dialog-title">Add Employee</DialogTitle>
           <DialogContent>
+          <h1>Upload the File Save All The</h1>
+              <h2>Employee Details</h2>
+                <Form action="" method="post" encType="multipart/form-data" className="form-horizontal">
+
+                  <FormGroup row className="center">
+                    <Col xs="12" md="12" >
+                      <Input className="center-block " type="file" id="file-input" name="file-input" />
+                    </Col>
+                  </FormGroup>
+                  </Form>
+                  <h2>OR</h2>
             <form >
                   <label for="username">Name:</label>
                   <input type="text" class="form-control" id="name" placeholder="Enter Name" name="name" required onChange={this.handleChangeName("multiline")}/>               

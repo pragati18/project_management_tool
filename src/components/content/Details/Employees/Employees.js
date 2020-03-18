@@ -7,6 +7,7 @@ import { OPEN_FORM } from "../../../../constants/action-types";
 import store from "../../../../store/employee";
 import Button from "@material-ui/core/Button";
 import AddIcon from "@material-ui/icons/Add";
+import Pdates from "./pdates";
 window.store = store;
 
 class Employees extends Component {
@@ -19,7 +20,9 @@ class Employees extends Component {
   render() {
     return (
       <div>
+      <Pdates/>
         <SimpleAppBar />
+        
         <ListComponent />
 
         <FormDialog />
