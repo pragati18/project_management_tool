@@ -5,7 +5,7 @@ import employee_list from "../components/content/Details/Employees/Employees";
 import official from "../components/content/Leaves/Official/Oleaves";
 import leaves_employee from "../components/content/Leaves/Empleaves/Eleaves";
 import admin_list from "../components/content/Details/Admin/Admin";
-import logout from "../components/content/Pages/Login/Login";
+import login from "../components/content/Pages/Login/Login";
 
 export default function Routes() {
     return (
@@ -16,7 +16,7 @@ export default function Routes() {
             <Route path = "/official" component = {official} />
             <Route path = "/employee-leaves" component = {leaves_employee} />
             <Route path = "/admin_list" component = {admin_list} />
-            <Route path = "/logout" component = {logout} />
+            <Route path = "/login" component = {login} />
         </Switch>
 
     );

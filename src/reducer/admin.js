@@ -11,7 +11,7 @@ const initialState = {
   //Read
   lists: [
     {
-      title: "Pragati Gaikwad",
+      title: "ABC XYZ",
       username:"Username",
       id: 0,
       date: "July 20, 2014",
@@ -19,7 +19,7 @@ const initialState = {
       email: "pragati@coditation.com"
     },
     {
-      title: "Mandar Gaikwad",
+      title: "XYZ ABC",
       username:"Username",
       id: 1,
       date: "Jan 7, 2014",

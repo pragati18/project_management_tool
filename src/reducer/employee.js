@@ -11,14 +11,14 @@ const initialState = {
   //Read
   lists: [
     {
-      title: "Nitin Nande",
+      title: " Jhon Deo",
       projectName:"Tapclicks",
       id: 0,
       skills: "PHP, Core Java",
       totalLogs: "10"
     },
     {
-      title: "Prajakta Shinde",
+      title: "ABC Demo",
       projectName:"Andapt",
       id: 1,
       skills: "Javascript, ReactJs",

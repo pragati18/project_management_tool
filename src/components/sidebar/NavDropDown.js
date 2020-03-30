@@ -52,7 +52,7 @@ class NavDropDown extends React.Component {
               </li>
 
               <li className="nav_li">
-                <a href="/logout" className="mr-2-padding nav_a"> <FontAwesomeIcon icon={faHome} className="mr-2" /> Logout </a>
+                <a href="/login" className="mr-2-padding nav_a"> <FontAwesomeIcon icon={faHome} className="mr-2" /> Logout </a>
               </li>
               </Router>
              
